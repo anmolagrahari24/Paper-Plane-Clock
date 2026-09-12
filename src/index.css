@@ -1,0 +1,310 @@
+:root {
+  --bg-color: #f2f2f6;
+  --content-bg: #ffffff;
+  --text-main: #000000;
+  --text-secondary: #8e8e93;
+  --accent-blue: #007aff;
+  --accent-red: #ff3b30;
+  --border-color: #c8c7cc;
+  --font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.screen-container {
+  width: 500px;
+  max-width: 500px;
+  height: 100vh;
+  max-height: 800px;
+  background-color: var(--bg-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+header a,
+header button {
+  color: var(--accent-blue);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+header span {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+  border-top: 1px solid var(--border-color);
+}
+
+.nav-footer a,
+.nav-footer span {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-footer span {
+  color: var(--text-main); /* Active state */
+}
+
+.clock-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.clock-display h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.clock-display p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.no-alarms {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.alarm-list {
+  list-style: none;
+  background-color: var(--content-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 20px;
+}
+
+.alarm-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.alarm-list li:last-child {
+  border-bottom: none;
+}
+
+.alarm-info h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.alarm-info h2 span.am-pm {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.alarm-info p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Inactive State styling */
+.alarm-list li.inactive .alarm-info h2,
+.alarm-list li.inactive .alarm-info p {
+  color: #d1d1d6;
+}
+
+/* Custom Checkbox (Simplified for visual match) */
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  accent-color: var(--accent-blue);
+  cursor: pointer;
+}
+
+.delete-icon {
+  color: white;
+  background-color: var(--accent-red);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.form-section-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 15px 20px 5px;
+}
+
+.form-group {
+  background-color: var(--content-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.time-selectors {
+  display: flex;
+  gap: 10px;
+}
+
+select {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+}
+
+input[type="text"] {
+  flex: 1;
+  margin-left: 15px;
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.action-buttons {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-save,
+.btn-delete {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-save {
+  color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+}
+
+.btn-delete {
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red);
+}
+
+.play-alarm-screen {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  max-height: 800px;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  position: relative;
+}
+
+.play-alarm-screen h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.play-alarm-screen p.date {
+  font-size: 1.2rem;
+  color: #a1a1aa;
+  margin-bottom: 30px;
+}
+
+.play-alarm-screen h2.label {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.play-actions {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-snooze {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  color: var(--accent-blue);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-stop {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 10px;
+}
