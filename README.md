@@ -1,16 +1,45 @@
-# React + Vite
+# ✈️ Paper Plane Clock
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and creative clock application built using **HTML, CSS, and JavaScript**. The project displays the current time with a paper-plane inspired design and a clean, responsive user interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Real-time clock
+* Paper-plane inspired UI
+* Clean and simple design
+* Responsive layout
+* Automatically updates the time
+* Easy to use interface
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* HTML5
+* CSS3
+* JavaScript
+* Git & GitHub
 
-## Expanding the ESLint configuration
+## 💻 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Clone the Repository
+
+```bash
+git clone https://github.com/anmolagrahari24/paper-plane-clock.git
+```
+
+### Open the Project
+
+Open the project folder and run the `index.html` file in your browser.
+
+## 👨‍💻 Author
+
+**Anmol Agrahari**
+
+Aspiring MERN Stack Developer
+
+GitHub: https://github.com/anmolagrahari24
+
+LinkedIn: https://www.linkedin.com/in/anmol-agrahari-8542132a2
+
+## ⭐ Support
+
+If you like this project, don't forget to give it a ⭐ on GitHub.
